@@ -11,10 +11,11 @@
 Console.WriteLine("Введите массив слов или символов, разделяя элементы массива между собой пробелами: ");
 string[] array = Console.ReadLine()!.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
+Console.WriteLine($"[{string.Join(", ", array)}]");
 
 string[] newArray = GetNewArray(array);
 
-Console.WriteLine($"[{string.Join(", ", array)} -> [{string.Join(", ", newArray)}]");
+Console.WriteLine($" -> [{string.Join(", ", newArray)}]");
 
 string[] GetNewArray(string[] array)
 {
